@@ -18,12 +18,12 @@
     "strict": true,
     "baseUrl": "./src",
     "paths": {
-      "#/database/*": ["database/*"],
-      "#/lib/*": ["lib/*"],
-      "#/types/*": ["types/*"],
-      "#/util/*": ["util/*"],
-      "#/shared/*": ["shared/*"],
-      "#/modules/*": ["modules/*"]
+      "#/database/*": ["./database/*"],
+      "#/lib/*": ["./lib/*"],
+      "#/types/*": ["./types/*"],
+      "#/util/*": ["./util/*"],
+      "#/shared/*": ["./shared/*"],
+      "#/modules/*": ["./modules/*"]
     }
   }
 }
