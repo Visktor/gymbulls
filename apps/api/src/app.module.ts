@@ -1,5 +1,4 @@
 import { Module, ValidationPipe } from '@nestjs/common';
-import { AppController } from './app.controller';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersController } from './modules/users/users.controller';
 import { UsersService } from './modules/users/users.service';
@@ -19,7 +18,7 @@ import { validate } from 'config/env';
     UsersModule,
     DatabaseModule,
   ],
-  controllers: [AppController, UsersController],
+  controllers: [UsersController],
   providers: [
     UsersService,
     {
