@@ -19,6 +19,7 @@
     "baseUrl": "./src",
     "paths": {
       "#/database/*": ["./database/*"],
+      "#/config/*": ["./config/*"],
       "#/lib/*": ["./lib/*"],
       "#/types/*": ["./types/*"],
       "#/util/*": ["./util/*"],

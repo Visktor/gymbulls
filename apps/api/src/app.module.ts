@@ -1,7 +1,4 @@
 import { Module, ValidationPipe } from '@nestjs/common';
-import { AuthModule } from './modules/auth/auth.module';
-import { UsersController } from './modules/users/users.controller';
-import { UsersService } from './modules/users/users.service';
 import { UsersModule } from './modules/users/users.module';
 import { APP_PIPE } from '@nestjs/core';
 import { ConfigModule } from '@nestjs/config';
@@ -14,13 +11,10 @@ import { validate } from 'config/env';
     ConfigModule.forRoot({
       validate: validate,
     }),
-    AuthModule,
     UsersModule,
     DatabaseModule,
   ],
-  controllers: [UsersController],
   providers: [
-    UsersService,
     {
       provide: APP_PIPE,
       useValue: new ValidationPipe({
