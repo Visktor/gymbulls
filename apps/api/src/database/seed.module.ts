@@ -16,10 +16,10 @@ import { EnvConfig } from 'config/env';
         password: configService.get('DB_PASSWORD'),
         database: configService.get('DB_NAME'),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
-        migrations: [__dirname + '/../**/migrations/*{.ts,.js}'],
+        migrations: [__dirname + '/../**/seeds/*{.ts,.js}'],
         synchronize: true,
       }),
     }),
   ],
 })
-export class DatabaseModule {}
+export class SeedModule {}
