@@ -24,6 +24,6 @@ export class Role {
   updated_at: Date;
 
   @OneToMany(() => User, (u) => u.role)
-  @JoinColumn({ name: 'role_id', referencedColumnName: 'id' })
+  @JoinColumn({ name: 'id', referencedColumnName: 'role_id' })
   users: User[];
 }
