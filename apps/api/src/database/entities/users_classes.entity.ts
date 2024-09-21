@@ -3,8 +3,6 @@ import {
   PrimaryGeneratedColumn,
   ManyToOne,
   JoinColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
   Column,
 } from 'typeorm';
 import { Class } from './classes.entity';
@@ -20,12 +18,6 @@ export class UserJoinClass {
 
   @Column('integer')
   user_id: number;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
 
   @ManyToOne(() => Class, (c) => c.id)
   @JoinColumn({ name: 'class_id', referencedColumnName: 'id' })

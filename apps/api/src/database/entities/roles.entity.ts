@@ -1,27 +1,11 @@
-import {
-  Column,
-  CreateDateColumn,
-  Entity,
-  JoinColumn,
-  OneToMany,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
-} from 'typeorm';
+import { Column, Entity, JoinColumn, OneToMany } from 'typeorm';
 import { User } from './users.entity';
+import { BaseModel } from './base';
 
 @Entity('roles')
-export class Role {
-  @PrimaryGeneratedColumn('increment')
-  id: number;
-
+export class Role extends BaseModel {
   @Column('varchar')
   name: string;
-
-  @CreateDateColumn()
-  created_at: Date;
-
-  @UpdateDateColumn()
-  updated_at: Date;
 
   @OneToMany(() => User, (u) => u.role)
   @JoinColumn({ name: 'id', referencedColumnName: 'role_id' })
